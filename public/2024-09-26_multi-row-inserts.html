@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="fav-icon.png">
+<link rel="stylesheet" href="styles.css">
+<title>Oracle Multi Row Inserts (row value constructor)</title>
+<h1>Oracle Multi Row Inserts (row value constructor)</h1>
+<hr />
+<section>
+<p>
+    Ich wollte bei einer Oracle Datenbank ein Insert mit mehreren Zeilen 
+    durchführen:
+</p>
+<pre><code>insert into foo values
+('foo1', 'bar1'),
+('foo2', 'bar2');
+</code></pre>
+<p>
+    Aber die Oracle Datenbank hat mir einen ORA-Fehlercode um die Ohren
+    geworfen. Ich war irritiert.
+</p>
+<p>
+    Meine lokale Oracle Testdatenbank hat das aber ohne Probleme geschluckt.
+    Meine lokale Testdatenbank ist aber auch die aktuelle Version 23ai
+    irgendwas (vorher 23c, umbenannt zu 23ai, wegen artificial intelligence
+    (kein Witz, aber auch nicht überraschend, nich nich?)).
+</p>
+<p>
+    Scheinbar ist das ein ganz frisches Feature der Oracle Datenbank 23c.
+</p>
+<p>
+    Das Feature heißt wohl <code>row value constructor</code> und existiert seit
+    SQL-92. Postgres unterstützt dieses Feature seit Version 8.2. Postgresql
+    8.2 wurde am 05.12.2006 veröffentlicht. Ich musste das nachschlagen, weil
+    manchmal benutzt man ja Dinge in SQL, die gar nicht "Standard" sind und sie
+    einfach so "hinnimmt".
+</p>
+<p>
+    18 Jahre später hat Oracle das nun also auch. Das ist doch super :).
+</p>
+</section>
+
+<hr />
+<section>
+<a href="/">Startseite</a> |
+<a href="https://github.com/schipplock">GitHub</a> (externer Link)
+</section>
