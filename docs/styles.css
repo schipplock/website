@@ -70,14 +70,6 @@ blockquote {
     margin:0;
 }
 
-blockquote p::before {
-    content: '| ';
-    left: -0.33em;
-    top: -0.2em;
-    font-family: monospace;
-    font-weight: bold;
-}
-
 blockquote p {
     padding:10px;
     margin:0;
