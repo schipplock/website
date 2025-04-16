@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="fav-icon.png">
+<link rel="stylesheet" href="styles.css">
+<title>Mit DBeaver die Datenbank gelöscht?</title>
+<main>
+<h1>Mit DBeaver die Datenbank gelöscht?</h1>
+<hr>
+<p>
+    Anton Zaides hat mit DBeaver eine produktive Tabelle fehlerhaft
+    aktualisiert, weil er <code>STRG+ENTER</code> gedrückt hat.
+</p>
+
+<p>
+    <strong>Hier das SQL:</strong>
+</p>
+
+<pre><code>UPDATE orders
+SET is_deleted = true
+
+WHERE id in (1, 2, 3)
+</code></pre>
+
+<p>
+    <strong>Wenn man hier jetzt <code>STRG+ENTER</code> drückt, führt
+        DBeaver folgendes Statement aus:</strong>
+</p>
+
+<pre><code>UPDATE orders
+SET is_deleted = true
+</code></pre>
+
+<p>
+    Es wurde also für alle Datensätze in dieser Tabelle der Wert für
+    <code>is_deleted</code> auf <code>true</code> gesetzt.
+</p>
+
+<p>
+    Und weil er auch noch Auto-Commit eingeschaltet hatte, war es dann
+    auch schon passiert :D. In DBeaver kann man den "Connection Type" auf
+    Production stellen. Dann ist Auto-Commit ausgeschaltet und das Fenster
+    ist dann auch rot, damit man merkt "hey, pass up!" :).
+</p>
+<hr>
+<footer>
+<a href="/">Startseite</a> |
+<a href="https://github.com/schipplock">GitHub</a> (externer Link)
+</footer>
+</main>
+

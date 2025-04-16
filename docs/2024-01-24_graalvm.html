@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="fav-icon.png">
+<link rel="stylesheet" href="styles.css">
+<title>Die heilige GraalVM</title>
+<main>
+<h1>Die heilige GraalVM</h1>
+<hr>
+<p>
+    Vor einigen Jahren habe ich schon einmal mit GraalVM experimentiert. Damals
+    bin ich relativ schnell zu dem Entschluss gekommen, dass GraalVM für meine
+    Anwendungszwecke zu langsam ist. Ich hatte damals auch eine nette
+    Unterhaltung mit einem der Entwickler.
+</p>
+<p>
+    Geschwindigkeit war aber nicht der einzige Grund, wieso ich GraalVM
+    skeptisch gegenüber stand. Auch die Tatsache, dass es sich in diversen
+    Situationen anders verhält. Ich teste ja wegen extrem langer Kompilierzeiten
+    von GraalVM immer noch mit Hotspot, um dann am Ende festzustellen, dass sich
+    die GraalVM-Variante anders verhält. Leider fällt das schon bei relativ
+    einfachen Dingen auf.
+</p>
+<p>
+    Jetzt, einige Jahre später, wollte ich es mal wieder ausprobieren. Ich will
+    nicht in die Details gehen, aber es ist immer noch "inkompatibel". Die
+    Performance hat sich gebessert, ist aber nicht bemerkenswert schneller,
+    manchmal sogar immer noch langsamer (Benchmarks).
+</p>
+<p>
+    Und schade ist, dass die gute Performance mit Geld erkauft werden muss. Mit
+    GraalVM CE schaut man in die Röhre. Man braucht GraalVM EE. Auch ein Grund,
+    wieso mich GraalVM schon damals wenig interessierte.
+</p>
+<p>
+    Und natürlich die Tatsache, dass quasi keine bestehende Anwendung kompatibel
+    ist :D. Und selbst, wenn ich für GraalVM optimiere, bei einem neuen Projekt
+    zum Beispiel, bemerke ich, dass Dinge am Ende anders funktionieren
+    (Kompatibilität).
+</p>
+<p>
+    Aber ich verstehe natürlich, dass GraalVM für Cloudanwendungen nützlich sein
+    kann. Schnellerer Start, weniger Ram für die "Runtime" etc...
+</p>
+<p>
+    Wobei, Payara startet in weniger als 4 Sekunden. Und dann braucht die
+    eigentliche Webanwendung ein Vielfaches, um zu starten. Und das bisschen Ram
+    vom Payara und der Hotspot VM...weiß nicht. Die eigentliche Anwendung
+    schnappt sich dann mehrere GigaByte, aber gut, wenn man in Microservices
+    denkt, dann summiert sich die Ramnutzung schnell, nur für die Runtime.
+</p>
+<p>
+    Wie auch immer, GraalVM ist nicht für mich, noch nicht :).
+</p>
+<hr>
+<footer>
+<a href="/">Startseite</a> |
+<a href="https://github.com/schipplock">GitHub</a> (externer Link)
+</footer>
+</main>
+
