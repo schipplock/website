@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="fav-icon.png">
+<link rel="stylesheet" href="styles.css">
+<title>Linux in Behörden</title>
+<main>
+<h1>Linux in Behörden</h1>
+<hr>
+<p>
+    <b>Linux kann Windows in Behörden ersetzen.</b> Eine Behauptung, die ich in meiner Filterblase
+    häufiger lese und höre. Und die Verwunderung darüber, wieso es kaum jemand tut, ist groß.
+    Das ist doch ein Selbstläufer. Oder? Sind "die da oben" denn alle dumm? Wieso benutzen die denn noch
+    Windows?
+</p>
+<p>
+    Vielleicht wichtig zu wissen ist, dass ich mit Linux aufgewachsen bin. Ich bin absolut kein
+    Fan von Windows und Microsoft (außer Windows NT4, das war gut :P).
+</p>
+<p>
+    <b>Eine Behauptung ist, dass man für Linux keine Lizenzgebühren bezahlen muss.</b>
+    Faktisch ist das korrekt, aber in der Realität ist diese Aussage absoluter Unsinn.
+    Niemand wird im professionellen Umfeld eine Linux-Distribution einsetzen für die es keinen
+    zugesicherten (bezahlten) Support gibt.
+</p>
+<p>
+    Sagen wir es wird eine kritische Sicherheitslücke in OpenSSL entdeckt. 
+    Wie läuft das dann ab? Der Entwickler der Bibliothek behebt den Bug und 
+    die Distributionen übernehmen diesen Fix. Dann ist man doch in erster 
+    Linie auf den Anbieter der Linux-Distribution angewiesen 
+    (Debian, Ubuntu, Redhat, SuSE, etc...). 
+    Theoretisch kann man die Bibliothek selbst austauschen, aber in der 
+    Realität wird das ja nicht so ablaufen, weil es nicht "skaliert". 
+    Ich habe extra OpenSSL als Beispiel gewählt.
+    Bei Debian gibt es btw. keinen Support direkt von Debian. Man ist auf "Partner" angewiesen.
+</p>
+<p>
+    Manchmal sind auch sogenannte "backports" notwendig. Das heißt, dass der Anbieter der
+    Distribution die Korrekturen in der Bibliothek nicht 1:1 übernehmen kann.
+    Er muss die Korrekturen für die Gegebenheiten der Linux-Distribution anpassen.
+    Zusätzlich muss das auch getestet werden. Alles Aufgaben des Anbieters der Distribution.
+    Man ist faktisch von dem Anbieter der Distribution abhängig.
+    Diese Aufgaben kann man alleine nicht leisten. Man darf aber gerne mal Linux from Scratch 
+    ausprobieren und versuchen das mit allen benötigten Features aktuell und sicher zu halten.
+    Das bekommt man nicht hin. Wirklich: keine Chance.
+</p>
+<p>
+    <b>Ein anderes Argument für Linux soll sein, dass man ältere Hardware länger nutzen kann.</b>
+    Die Realität ist aber auch, dass Linux aktuelle Geräte nur schlecht oder gar nicht unterstützt, weil
+    die Hersteller das einfach nicht interessiert. Bei Grafikkarten sieht es mittlerweile wirklich
+    gut aus, aber auch nicht perfekt. Wenn man ein nagelneues Modell eines Laptops kauft ist die Chance
+    sehr hoch, dass es mit Linux gar nicht oder nur eingeschränkt nutzbar sein wird.
+    Selbst Geräte, die als "kompatibel mit Linux" ausgezeichnet werden, sind häufig problematisch.
+    Und natürlich hat man als Privatperson die Möglichkeit die "alten" Modelle zu kaufen, aber wenn ich
+    200 neue Laptops bestelle, dann habe ich oft gar nicht die Möglichkeit ein altes Modell zu wählen.
+    Dass der Hersteller keine Linux-Kompatibilität "anbietet" ist nicht die "Schuld" von Linux, aber
+    es ändert ja nichts daran, dass die Geräte dann nicht mit Linux kompatibel sind.
+</p>
+<p>
+    Und spielt alte Hardware im behördlichen Umfeld überhaupt eine Rolle?
+    Ich weiß, dass man Server- als auch Desktop-Hardware fast immer mit Support kauft.
+    Und wenn es keinen Support mehr zu kaufen gibt, wird die Hardware irgendwann durch neue ersetzt.
+    Für ein Serversystem brauche ich zugesicherten Support. Die Gewissheit, dass ich schnell
+    Ersatzteile (Mainboards, Raid-Controller, Netzteile, Firmware, ...) geliefert bekomme, wenn es mal kracht.
+    Mir ist aber auch bewusst, dass es Szenarien gibt, wo irgendwo ein alter Windows 2000 Server in der
+    Ecke steht und nur funktioniert, weil der Zufall es so will :).
+</p>
+<p>
+    <b>Eine weitere Forderung beschreibt die Meidung aller Microsoft-Produkte.</b> Bisher ging es ja nur darum
+    das Betriebssystem zu tauschen. Aber logischerweise folgt dann die Erkenntnis, dass man dann die
+    Windows-Software nicht mehr nutzen kann.
+</p>
+<p>
+    Also was schlägt man vor? Einfach was anderes benutzen. Am besten OpenSource, weil das ja bekannterweise
+    durch Luft und Liebe entsteht. Wir benutzen MS Office? Kein Problem: einfach LibreOffice verwenden.
+    Jeder weiß, dass LibreOffice genau den gleichen Funktionsumfang hat wie Microsofts Office.
+    Ich will LibreOffice auch nicht schlecht reden, aber es ist nun mal Fakt, dass LibreOffice nicht zu 100%
+    kompatibel mit Microsofts Office ist. Das kann sogar an Microsofts Office selbst liegen, wenn sie sich 
+    vielleicht nicht an Standards halten, aber ändert ja nichts an der Situation.
+    Und an wen wendet man sich bei (technischen) Probleme? Es gibt eine Mailinglist und Google. Viel Glück.
+</p>
+<p>
+    Exchange und Outlook ersetzt man einfach mit Open-Xchange. Die Admins sollen einfach lernen damit umzugehen.
+    So könnte die Forderung lauten und wird oft so auch formuliert. Die wollen einfach nur den alten Kram weiter
+    betreiben. Den alten Kram, den sie bereits kennen. Ja, korrekt. Das ist sicherlich auch ein Grund.
+    Open-Xchange kostet btw. auch Geld, wenn man Support braucht. Da steckt nämlich eine Firma dahinter, die sich
+    kümmert und dafür Geld verlangt. So wie Microsoft :). Völlig unerwartet /s.
+</p>
+<p>
+    Als Verzeichnisdienst benutzt man einfach, äh, keine Ahnung, 389ds von Red Hat. Huch, dann bin ich ja von
+    Red Hat abhängig, wenn ich Support benötige. Ach, einfach OpenLDAP nutzen, yolo :). Wird schon gut gehen.
+</p>
+<p>
+    Irgendwer realisiert dann, dass viele Fachanwendungen in den Behörden Windows-Anwendungen sind.
+    Wie löst man dieses Problem? Nichts leichter als das: man macht aus den Desktop-Anwendungen einfach
+    Webanwendungen. Und ruck zuck hat man irgendwo Kubernetes laufen und freut sich ein drittes oder zweites Loch.
+    Also ja, ich finde das Vorhaben nicht grundsätzlich falsch, aber das macht man doch nicht "einfach so".
+    Wer soll das bitte bezahlen? Und wer kümmert sich um die neuen Bugs? Was da an Geldwerten flöten geht...
+</p>
+<p>
+    Ich gehe nur noch auf ein weiteres pro-Argument ein, weil mein Bier auf mich wartet: <b>Unabhängigkeit</b>
+</p>
+<p>
+    Ich verstehe ja, dass man unabhängig sein möchte, aber ist das überhaupt realistisch umsetzbar?
+    Fast jede Alternative zu Microsoft bedeutet eine andere Abhängigkeit. Und diese anderen Abhängigkeiten sind,
+    trotz "OpenSource", imho risikoreicher als Microsoft. Ich nehme in Kauf abhängig von vielen kleineren Firmen zu sein.
+    Ich nehme in Kauf Microsoft durch Red Hat zu ersetzen (wo mittlerweile auch IBM "drin steckt").
+    Wie unbhängig bin ich denn da? Die ganzen wichtigen Komponenten in Linux werden zu großen Teilen von Red Hat, Canonical,
+    Oracle (jaha!), und Microsoft (ja, wirklich!) entwickelt. Der systemd-Macher arbeitet für Microsoft (nur ein Beispiel).
+    Microsoft könnte ja einfach die Preise erhöhen, aber die anderen doch auch!? Und dann habe ich das gleiche Problem, nur 
+    woanders.
+</p>
+<p>
+    Ich habe ganz oft das Gefühl, dass ich von Experten umzingelt bin, die alles quasi selber entwickeln und betreiben können.
+    Und diese Experten fühlen sich auch in der Lage das innerhalb kürzester Zeit umzusetzen. Was ich da schon alles gelesen
+    und gehört habe...da schlackere ich mit den Ohren.
+    Ich bin mir aber (fast) sicher, dass diejenigen, die den Linuxumstieg fordern, absolut keine praktische Erfahrung mit der
+    Realität haben. Zumindest hoffe ich das. Sollte ich falsch liegen, habe ich aber mindestens den Glauben an die Menschheit
+    veloren :D.
+</p>
+<p>
+    Wenn Microsoft ein funktionierendes Gesamtpaket anbietet, das bereits genutzt, verstanden und akzeptiert wird, dann ist es
+    für mich unlogisch das mit Alternativen zu ersetzen, die nicht "ganz so gut funktionieren" und ganz viele andere und vor allem
+    neue Probleme mit sich bringen. Natürlich kann man jetzt mit einer Studie argumentieren, hätte hätte Fahrradkette.
+</p>
+<p>
+    So, Beer o'clock! :)!!!!!!
+</p>
+<hr>
+<footer>
+<a href="/">Startseite</a> |
+<a href="https://github.com/schipplock">GitHub</a> (externer Link)
+</footer>
+</main>
+
