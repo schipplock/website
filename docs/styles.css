@@ -1,6 +1,7 @@
 :root {
     --clr-background: #2e3440;
     --clr-background-fieldset: #393F4C;
+    --clr-background-fieldset-brighter: #3d4452;
     --clr-title: #ebcb8b;
     --clr-text: #eceff4;
     --clr-link: #a3be8c;
@@ -16,7 +17,9 @@ body {
 }
 
 main {
-  max-width: 500px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header img {
@@ -27,11 +30,22 @@ header img {
   margin-top: 10px;
 }
 
+article {
+    background-color: var(--clr-background-fieldset);
+    box-sizing: border-box;
+    padding: 20px 110px 20px 110px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
 h1 {
     color: var(--clr-title);
-    max-width: 500px;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 img {
@@ -47,6 +61,7 @@ a:link, a:visited {
 a:active, a:hover {
   background-color: var(--clr-title);
   color: var(--clr-background);
+  border-radius: 2px;
 }
 
 ol {
@@ -94,6 +109,14 @@ pre code {
     margin:0;
 }
 
+p {
+    font-size: 18px;
+    line-height: 1.75;
+    text-align: justify;
+    hyphens: auto;
+    text-justify: inter-word;
+}
+
 p code {
     background-color: var(--clr-blockquote);
     padding: 1px;
@@ -106,26 +129,58 @@ hr {
 }
 
 fieldset {
-  background-color: var(--clr-background-fieldset);
-  border-color: var(--clr-line);
-  border: 1px solid var(--clr-line);
-  padding: 15px;
-  margin:0;
-  margin-bottom: 10px;
-  box-sizing: border-box;
+    font-size: 14px;
+    background-color: var(--clr-background-fieldset);
+    border: 0;
+    border-radius: 5px;
+    padding: 15px;
+    margin:0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 fieldset legend {
   font-family: monospace;
-  font-size: 0.8em;
+  font-size: 10px;
+  background-color: var(--clr-title);
+  color: var(--clr-background);
+  border-radius: 2px;
+}
+
+fieldset a:link {
+    font-size: 14px;
+}
+
+fieldset.inner {
+    background-color: var(--clr-background-fieldset-brighter);
 }
 
 footer {
   font-size: 0.8em;
+  text-align: center;
 }
 
 @media all and (max-width: 500px) {
     main {
         max-width: 100%;
+    }
+
+    article {
+        padding: 10px 40px 10px 40px;
+        margin-bottom: 3px;
+        border-radius: 5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    h1 {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    fieldset {
+        font-size: 12px;
     }
 }
