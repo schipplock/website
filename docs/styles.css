@@ -8,6 +8,7 @@
     --clr-list: #e5e9f0;
     --clr-blockquote: #4c566a;
     --clr-line: #ebcb8b;
+    --clr-table-background: #3d4452;
 }
 
 body {
@@ -45,6 +46,16 @@ h1 {
     padding: 0;
     margin-bottom: 10px;
     font-size: 1.4rem;
+    text-align: center;
+}
+
+h2 {
+    color: var(--clr-title);
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -153,6 +164,40 @@ fieldset a:link {
 
 fieldset.inner {
     background-color: var(--clr-background-fieldset-brighter);
+}
+
+table.dark {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #eee;
+  background-color: var(--clr-table-background);
+  margin-bottom: 40px;
+}
+
+table.dark thead {
+  background-color: #3d4452;
+}
+
+table.dark thead th {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 2px solid var(--clr-title);
+}
+
+table.dark tbody td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #444;
+}
+
+table.dark tbody tr:nth-child(even) {
+  background-color: #495160;
+}
+
+table.dark tbody tr:hover {
+  background-color: var(--clr-title);
+  color: #444;
 }
 
 footer {
