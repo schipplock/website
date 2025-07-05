@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="fav-icon.png">
+<link rel="stylesheet" href="styles.css">
+<title>inflight@1.0.6: do not use it!</title>
+<main>
+<header>
+<a draggable="false" href="/"><img draggable="false" class="logo-img" src="assets/images/logo/Logo.png" alt="Andreas Schipplock" title="Andreas Schipplock"></a>
+</header>
+<article>
+<h1>inflight@1.0.6: do not use it!</h1>
+<hr>
+<p>
+    Ich wollte dieses Wochenende mal mit React Native rumspielen.
+    Auf der Website von React Native wird mir empfohlen Expo zu nutzen.
+</p>
+<p>
+    Auf der Expo "get-started/start-developing/"-Website wird mir ein Befehl
+    angezeigt, den ich ausführen soll:
+</p>
+<pre><code>npx expo start</code></pre>
+<p>
+    Schon die allererste Warnung irritiert mich:
+</p>
+<pre><code>npm warn deprecated inflight@1.0.6: This module is not 
+  supported, and leaks memory. Do not use it. Check out lru-cache
+  if you want a good and tested way to coalesce async requests by a 
+  key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are 
+  no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are 
+  no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are 
+  no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are 
+  no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are 
+  no longer supported
+</code></pre>
+<p>
+    This module is not supported, and leaks memory. Do not use it.
+    Die Meldung ist ja ziemlich eindeutig, finde ich. Do not use it! :D
+    Also hat Expo bestimmt nur einen Fehler in den Dependencies und
+    wird das sicher korrigieren, oder?
+</p>
+<p>
+    Nein. Ein Nutzer hat dieses Problem am 20. Mai 2025 über die "Issues" 
+    beim Projekt "expo/expo" gemeldet (#36970). Und dem Entwickler-Team von "expo"
+    ist das sicher nicht einfach scheiß egal, oder?
+</p>
+<blockquote>
+    <p>
+        If you are concerned about the warnings, I would recommend opening 
+        issues on the relevant projects using these packages.
+    </p>
+</blockquote>
+<p>
+    Ja, doch, ist denen scheiß egal. Kümmer dich gefälligst selbst darum, dass 
+    wir (expo) die falschen Dependencies nutzen.
+</p>
+<p>
+    Interessant ist auch, wie viele Downloads diese Dependency noch wöchentlich hat.
+</p>
+<img src="/screenshots/inflight.png" alt="inflight">
+<p>
+    66 Millionen!? Puh. Diese Dependency wird außerdem noch von 2455 Projekten genutzt.
+    Es ist angeblich halb so wild, weil das nur für "development or build time"
+    und "never run within your published app", aber...du bist ein HUHN! :P
+    Die Dependency ist 9 Jahre alt und es wird keine neue Version geben.
+    Das Projekt ist archiviert.
+</p>
+<p>Gut, es war mir (k)eine Freude. Ich lösch dann mal Expo.</p>
+</article>
+<footer>
+<a href="/">Startseite</a> |
+<a href="https://github.com/schipplock">GitHub</a> (externer Link)
+</footer>
+</main>
